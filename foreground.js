@@ -15,7 +15,7 @@ class ElementPicker {
 
         const defaultOptions = {
             container: document.body,
-            selectors: "*", // default to pick all elements
+            selectors: "p, li, span, a, em, strong, code, text", // default to pick all elements
             background: "rgba(153, 235, 255, 0.5)", // transparent light blue
             borderWidth: 5,
             transition: "all 150ms ease", // set to "" (empty string) to disable
@@ -44,6 +44,7 @@ class ElementPicker {
                     // console.log("screenX: " + e.screenX);
                     // console.log("screenY: " + e.screenY);
                     // console.log("TCL: hoveredElement", hoveredElement);
+
                     if (this._previousTarget === hoveredElement) {
                         // avoid repeated calculation and rendering
                         return;
@@ -163,7 +164,7 @@ class ElementPicker {
 
 const picker = new ElementPicker({
     action: {
-        trigger: "click", // click, dblclick, mouseover
+        trigger: "dblclick", // click, dblclick, mouseover
         callback: (function (target) {
             // target.remove();
             // target.style.fontSize = "50px";
