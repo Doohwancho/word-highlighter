@@ -15,8 +15,10 @@ class ElementPicker {
 
         const defaultOptions = {
             container: document.body,
-            selectors: "p, li, span, a, em, strong, code, text", // default to pick all elements
-            background: "rgba(153, 235, 255, 0.5)", // transparent light blue
+            selectors: "p, li, span, a, em, strong, code, text, th, td", // default to pick all elements
+            // background: "rgba(153, 204, 255, 0.5)", // chatGPT's recommendation of airy blue color for concentration
+            background: "rgba(128, 177, 102, 0.3)", // chatGPT's recommendation of green color for soothing eyes
+
             borderWidth: 5,
             transition: "all 150ms ease", // set to "" (empty string) to disable
             ignoreElements: [document.body],
